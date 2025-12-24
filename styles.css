@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{ font-size: 25;}
+h2{ font-size: 20;}
+p{ font-size: 15;}
+
+/*le ponemos un fondo al body de todos los html*/
+body {
+    background-image:
+    url("./img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/*logo de la pagina, ubicado en el header y en el footer*/
+.logo {
+    width: 80px;
+    position: absolute;
+    left: 1px;      
+    margin: 20px 1px 1px 1px;
+}
+/*hacemos que el header scrolee con nosotros para poder tener siempre el nav a mano*/
+header{
+    background-color: rgb(36, 36, 114);
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    width: 100%;
+    padding-top: 10px;
+}
+/*es parte de lo que hace bajar al nav*/
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 20px;
+}
+nav {
+  background-color: #440bcb;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  width: 100%;
+  padding: 10px;
+}
+nav a,
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+}
+/*es la fotito que esta abajo del texto de bienvenida*/
+.baner {
+    width: 100%;
+    height: 100px;
+    background-image: url("./img/banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    h1{color: #b100f1;}
+    p{color: white;}
+}
+/*aca estan los tres mejores juegos*/
+.mejores {
+    p{
+        width: 100%;
+        text-align: center;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 20px;
+}
+/*esto hace que los tres juegos queden en tamaño caja de play*/
+.cards {
+    flex: 0 0 200px;
+    height: 300px !important;   /*si no le ponia esto no me dejaba modificarle la altura*/
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+/*esto es para que se agrande cuando le pasas el mouse por arriba*/
+.cards:hover {
+    transform: scale(1.05);
+}
+.empresarial,
+.products{
+    margin: 20px;
+}
+
+footer {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  width: 100%;
+  padding: 15px 0;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*esta es la lista desplegable de juegos, consolas, etc.*/
+details {
+  background-color: #6d3dbb;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 8px;
+}
+summary {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+summary::marker {
+  display: none;
+}
+details ul {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 8px;
+}
+details ul li {
+  padding: 5px 0;
+}
+.empresa_main{
+    margin: 15px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+.devoluciones-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+/* ===== CONTACTO → FLEX ===== */
+.contacto-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+}

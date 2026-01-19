@@ -1,0 +1,22 @@
+@use '../utilities/variables' as*;;
+@use '../utilities/mixin' as*;
+@use '../utilities/social' as *;
+/*INICIO FOOTER*/
+footer {
+  @include flex();
+  background-color: $color_footer;
+  color: white;
+  gap: 35px;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/*FIN FOOTER*/

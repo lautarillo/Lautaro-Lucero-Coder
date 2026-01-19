@@ -1,0 +1,64 @@
+/*es la fotito que esta abajo del texto de bienvenida*/
+.baner {
+    width: 100%;
+    height: 100px;
+    background-image: url("../img/bannnner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    h1{color: #ceb1d8;}
+    p{color: white;}
+    text-align: center;
+}
+/*aca estan los tres mejores juegos*/
+.mejores {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 20px;
+}
+/*esto hace que los tres juegos queden en tamaño caja de play*/
+.cards {
+  flex: 0 0 200px;
+  height: 300px;
+  position: relative;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  overflow: visible;
+  transition: transform 1.5s ease, filter 1.5s ease;
+  box-shadow: 0 10px 25px rgba(1, 1, 1, 1);
+}
+.mini-card {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 150px;
+  background: rgb(226, 224, 221);
+  color: rgb(29, 27, 27);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease, transform 1s ease;
+}
+/*esto es para que se agrande cuando le pasas el mouse por arriba*/
+.cards:hover {
+  transform: scale(1.05);
+  filter: grayscale(1);
+}
+.cards:hover .mini-card {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

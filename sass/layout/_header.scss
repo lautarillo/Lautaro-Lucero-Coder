@@ -1,0 +1,40 @@
+@use '../utilities/variables' as*;
+@use '../utilities/mixin' as*;
+/*LOGO*/
+.logo {
+  width: 80px;
+  position: absolute;
+  left: 1px;      
+  margin: 20px 1px 1px 1px;
+}
+
+/*INICIO HEADER*/
+/*hacemos que el header scrolee con nosotros para poder tener siempre el nav a mano*/
+header{
+  background-color: rgb(36, 36, 114);
+  position: sticky;
+  z-index: 1000; /*este zindex 1000 hace que el header se ponga arriba de todo*/
+  top: 0px;
+  width: 100%;
+  padding-top: 10px;
+}
+/*es parte de lo que hace bajar al nav*/
+.container{
+  @include flex();
+  position: relative;
+  padding: 0 20px;
+}
+nav {
+  @include flex();
+  background-color: $color_nav;
+;  
+  gap: 35px;
+  width: 100%;
+  padding: 10px;
+}
+nav a,
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+}
+/*FIN HEADER*/

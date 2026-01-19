@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* TIPOGRAFÍAS RESPONSIVE */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+p {
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(to right, rgb(91, 91, 160), rgb(146, 224, 146));
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  background-color: rgb(36, 36, 114);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 70px;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #440bcb;
+  gap: 35px;
+  width: 100%;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+nav a,
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* BANNER */
+.baner {
+  width: 100%;
+  min-height: 250px;
+  padding: 40px 20px;
+  background-image: url("../img/bannnner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.baner h1 {
+  color: #ceb1d8;
+}
+
+.baner p {
+  color: white;
+}
+
+/* SECCIÓN MEJORES JUEGOS */
+.mejores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  justify-items: center;
+  font-size: 18px;
+}
+
+/* CARDS */
+.cards {
+  width: 100%;
+  max-width: 250px;
+  height: 320px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  box-shadow: 0 10px 25px rgb(1, 1, 1);
+}
+
+.cards:hover {
+  transform: scale(1.05);
+  filter: grayscale(1);
+}
+
+.mini-card {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  width: 170px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.cards:hover .mini-card {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* TEXTO GENERAL */
+.texto,
+.titulo {
+  max-width: 900px;
+  margin-top: 20px;
+  padding: 40px 20%;
+  text-align: center;
+  background: rgba(3, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.6;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+.titulo{
+  background: rgb(44, 42, 42);
+}
+/* CATEGORÍAS */
+details {
+  background-color: #412470;
+  color: white;
+  margin: 10px;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+details ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.cat {
+  height: 120px;
+  background-color: rgb(95, 35, 135);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.cat:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+/* CONTACTO */
+.contacto-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* DEVOLUCIONES */
+.devoluciones-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* ICONOS REDES */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  width: 100%;
+  padding-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #1b1d1f;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* IMÁGENES RESPONSIVE */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .baner {
+    min-height: 200px;
+  }
+}

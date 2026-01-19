@@ -151,7 +151,7 @@ nav a,
 .texto,
 .titulo {
   max-width: 900px;
-  margin-top: 20px;
+  margin: 1rem auto;
   padding: 40px 20%;
   text-align: center;
   background: rgba(3, 0, 0, 0.6);
@@ -161,6 +161,8 @@ nav a,
   font-size: 18px;
   line-height: 1.6;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  display: block;
 }
 .titulo{
   background: rgb(44, 42, 42);

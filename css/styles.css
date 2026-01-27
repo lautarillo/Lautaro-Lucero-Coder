@@ -270,13 +270,16 @@ img {
   nav {
     flex-direction: column;
     gap: 10px;
+    max-height: 50px;
   }
 
   .container {
     flex-direction: column;
+    max-height: 50px;
   }
 
   .baner {
     min-height: 200px;
+    
   }
 }

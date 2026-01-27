@@ -4,7 +4,6 @@
 /*INICIO FOOTER*/
 footer {
   @include flex();
-  margin-bottom: 10px;
   background-color: $color_footer;
   color: white;
   gap: 35px;
@@ -16,7 +15,6 @@ footer a {
   color: white;
   text-decoration: none;
   font-size: 10px;
-  margin-bottom: 10px;
 }
 footer a:hover {
   text-decoration: underline;

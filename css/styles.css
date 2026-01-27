@@ -285,6 +285,8 @@ img {
   nav {
     padding: 5px;
     gap: 12px;
+    width: auto;
+    border-radius: 10px;
   }
 
   nav a {

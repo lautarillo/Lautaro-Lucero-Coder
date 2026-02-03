@@ -40,18 +40,6 @@ body{
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-.cat{
-  align-items: center;
-  background-color: rgb(188, 183, 192);
-  height: 25px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
-}
-.cat:hover{
-  transition: transform 0.40s ease;
-  transform: scale(1.05);
-}
 /*esta es la lista desplegable de juegos, consolas, etc.*/
 details {
   background-color: #412470;
@@ -76,11 +64,6 @@ details ul {
 }
 details ul li {
   padding: 7px;
-}
-summary {
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
 }
 
 details ul {
@@ -131,6 +114,10 @@ details ul {
   z-index: 5;
   pointer-events: none;
 }
+.cat:hover{
+  transition: transform 0.40s ease;
+  transform: scale(1.05);
+}
 .cat:hover img {
   opacity: 0.15;
   filter: grayscale(1) brightness(0.4);
@@ -142,11 +129,9 @@ details ul {
   opacity: 1;
   transform: scale(1);
 }
-
 /*FIN BODY PRODUCTOS*/
 
 /*INICIO BODY CONTACTOS*/
-/* ===== CONTACTO → FLEX ===== */
 .contacto-flex {
   display: flex;
   flex-direction: column;
@@ -156,6 +141,7 @@ details ul {
   margin: 0 auto;
   border-radius: 10px;
 }
+
 /*FIN BODY CONTACTOS*/
 
 /*INICIO BODY DEVOLUCIONES*/

@@ -536,4 +536,9 @@ footer a:hover {
     font-size: 14px;
     padding: 4px 6px;
   }
+
+  footer{
+    padding: 5px 10px;
+    gap: 8px;
+  }
 }

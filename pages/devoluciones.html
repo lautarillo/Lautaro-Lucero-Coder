@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Inicio | Épica Tienda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devoluciones | Épica Tienda</title>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- css-->
+  <!-- css -->
   <link rel="stylesheet" href="../css/styles.css">
   <!-- responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,46 +14,37 @@
   <meta name="description" content="Texto descriptivo de tu página">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img class="logo" src="./img/logo.png" alt="logo del sitio">
-            <h1 class="navbar-brand">Épica Tienda de Videojuegos</h1>
-        </div>
-        <nav>
-            <a href="pages/productos.html">Productos</a>
-            <a href="pages/empresa.html">Empresa</a>
-            <a href="pages/contacto.html">Contacto</a>
-            <a href="pages/devoluciones.html">Devoluciones</a>
-        </nav>
-    </header>
-<main>
-    <div class="baner">
-        <h1>Bienvenido a Épica Tienda de Videojuegos</h1>
-        <p>Los mejores juegos, consolas y accesorios gamer</p>
+<header>
+    <div class="container">
+        <img class="logo" src="../img/logo.png" alt="logo del sitio">
+        <a class="navbar-brand" href="index.html"> Épica Tienda de Videojuegos</a>
     </div>
-    <section class="mejores">
-        <p>Estos son nuestros juegos favoritos y los que mas recomendamos a nuestros clientes</p>
-        <div class="cards" style="background-image: url('./img/re4.webp');">
-            <div class="mini-card"> 
-                ¿A donde van todos? ¿Al bingo? 
-            </div>
-        </div>
-        <div class="cards" style="background-image: url('./img/silent\ hill2.webp');">
-            <div class="mini-card"> 
-                Ahora estoy aquí sola.. En nuestro lugar especial esperandote.
-            </div>
-        </div>        
-        <div class="cards" style="background-image: url('./img/tlou2.webp');">
-            <div class="mini-card"> 
-                No creo poder perdonarte nunca por eso... Pero me gustaria intentarlo
-            </div>
-        </div>
-        
-    </section> 
+        <nav>
+            <a href="../index.html">inicio</a>
+            <a href="./productos.html">productos</a>
+            <a href="./empresa.html">Empresa</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+</header>
+<main class="devoluciones-grid">
+    <h1 class="titulo">Políticas de Devoluciones</h1>
+    <section class="texto">
+        <p>En Épica Tienda de Videojuegos queremos que estés 100% conforme con tu compra.
+        Si necesitás realizar una devolución o cambio, contamos con un proceso simple y transparente.</p>
+        <ul>
+            <li>Las devoluciones pueden realizarse dentro de los 10 días posteriores a la compra.</li>
+            <li>El producto debe encontrarse en perfecto estado, sin uso y con su embalaje original.</li>
+            <li>Es necesario presentar el comprobante de compra.</li>
+        </ul>
+        <p>Una vez recibido el producto, evaluaremos su estado y nos comunicaremos para coordinar el cambio o la devolución del dinero.</p>
+        <p>No se aceptan devoluciones de productos digitales ni códigos descargables.</p>
+        <p>Ante cualquier duda, podés comunicarte con nuestro equipo a través de la sección Contacto.
+        Estamos para ayudarte y garantizarte la mejor experiencia gamer.</p>
+    </section>
 </main>
 <footer>
     <div class="footer-info">
-        <img class="logo" src="./img/logo.png" alt="logo del sitio">
+        <img class="logo" src="../img/logo.png" alt="logo del sitio">
         <p>© 2025 Épica Tienda de Videojuegos</p>    
     </div>
     <div class="footer-social">
@@ -95,13 +87,12 @@
     <div class="footer-links">
         <h4>Enlaces</h4>
         <ul>
-            <a href="pages/productos.html">Productos</a>
-            <a href="pages/empresa.html">Empresa</a>
-            <a href="pages/contacto.html">Contacto</a>
-            <a href="pages/devoluciones.html">Devoluciones</a>
+            <a href="../index.html">Inicio</a>
+            <a href="./productos.html">Productos</a>
+            <a href="./empresa.html">Empresa</a>
+            <a href="./contacto.html">Contacto</a>            
         </ul>
-    </div> 
-     
+    </div>  
 </footer>
 <!-- Bootstrap -->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

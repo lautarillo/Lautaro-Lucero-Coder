@@ -30,45 +30,56 @@ body {
 }
 
 /* HEADER */
-header {
-  background-color: rgb(36, 36, 114);
+.site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: rgb(36, 36, 114);
   width: 100%;
-  padding-top: 10px;
 }
 
-.container {
+/* CONTENEDOR SUPERIOR */
+.header-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  padding: 10px 20px;
-}
-
-.logo {
-  width: 70px;
-  margin: 10px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #440bcb;
-  gap: 35px;
-  width: 100%;
+  gap: 8px;
   padding: 10px;
-  flex-wrap: wrap;
 }
 
-nav a,
-.navbar-brand {
+/* LOGO */
+.logo {
+  width: 45px;
+  height: auto;
+}
+
+/* MARCA */
+.site-brand {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+/* NAV */
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #440bcb;
+  padding: 10px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 /* BANNER */
@@ -305,8 +316,29 @@ img {
     padding: 4px 6px;
   }
 }
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
+@media (min-width: 768px) {
+
+  .header-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .site-brand {
+    font-size: 18px;
+  }
+
+  .main-nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  .main-nav a {
+    font-size: 16px;
+  }
 }

@@ -1,56 +1,127 @@
 @charset "UTF-8";
-
-/* RESET */
 * {
   padding: 0;
-  margin: 0;
+  margin: 20;
   box-sizing: border-box;
 }
 
-/* TIPOGRAFÍAS RESPONSIVE */
+/*INICIO VARIABLES*/
+/*FIN VARIABLES*/
 h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: 25;
 }
 
 h2 {
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-size: 20;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 15;
   width: 100%;
   text-align: center;
-  line-height: 1.6;
 }
 
-/* BODY */
-body {
-  background: linear-gradient(to right, rgb(91, 91, 160), rgb(146, 224, 146));
-  font-family: Arial, sans-serif;
+/*es la fotito que esta abajo del texto de bienvenida*/
+.baner {
+  width: 100%;
+  height: 100px;
+  background-image: url("../img/bannnner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.baner h1 {
+  color: #ceb1d8;
+}
+.baner p {
+  color: white;
+}
+.baner {
+  text-align: center;
 }
 
-/* HEADER */
+/*aca estan los tres mejores juegos*/
+.mejores {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 20px;
+}
+
+/*esto hace que los tres juegos queden en tamaño caja de play*/
+.cards {
+  flex: 0 0 200px;
+  height: 300px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  overflow: visible;
+  transition: transform 1.5s ease, filter 1.5s ease;
+  box-shadow: 0 10px 25px rgb(1, 1, 1);
+}
+
+.mini-card {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 150px;
+  background: rgb(226, 224, 221);
+  color: rgb(29, 27, 27);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/*esto es para que se agrande cuando le pasas el mouse por arriba*/
+.cards:hover {
+  transform: scale(1.05);
+  filter: grayscale(1);
+}
+
+.cards:hover .mini-card {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/*LOGO*/
+.logo {
+  width: 80px;
+  position: absolute;
+  left: 1px;
+  margin: 20px 1px 1px 1px;
+}
+
+/*INICIO HEADER*/
+/*hacemos que el header scrolee con nosotros para poder tener siempre el nav a mano*/
 header {
   background-color: rgb(36, 36, 114);
   position: sticky;
-  top: 0;
-  z-index: 1000;
+  z-index: 1000; /*este zindex 1000 hace que el header se ponga arriba de todo*/
+  top: 0px;
   width: 100%;
   padding-top: 10px;
 }
 
+/*es parte de lo que hace bajar al nav*/
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  padding: 10px 20px;
-}
-
-.logo {
-  width: 70px;
-  margin: 10px;
+  position: relative;
+  padding: 0 20px;
 }
 
 nav {
@@ -61,120 +132,94 @@ nav {
   gap: 35px;
   width: 100%;
   padding: 10px;
-  flex-wrap: wrap;
 }
 
 nav a,
 .navbar-brand {
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
-/* BANNER */
-.baner {
-  width: 100%;
-  min-height: 250px;
-  padding: 40px 20px;
-  background-image: url("../img/bannnner.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/*FIN HEADER*/
+/*INICIO BODY*/
+body {
+  background: linear-gradient(to right, rgb(91, 91, 160), rgb(146, 224, 146));
+}
+
+/*BODY PRODUCTOS*/
+.texto,
+.categoria {
+  margin-top: 20px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.baner h1 {
-  color: #ceb1d8;
+.texto h1,
+.titulo h1 {
+  margin-top: 10px;
+  font-size: 30px;
 }
-
-.baner p {
-  color: white;
+.texto h2,
+.titulo h2 {
+  font-size: 23px;
+  text-align: left;
 }
-
-/* SECCIÓN MEJORES JUEGOS */
-.mejores {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  padding: 40px 20px;
-  justify-items: center;
-  font-size: 18px;
-}
-
-/* CARDS */
-.cards {
-  width: 100%;
-  max-width: 250px;
-  height: 320px;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  transition: transform 0.6s ease, filter 0.6s ease;
-  box-shadow: 0 10px 25px rgb(1, 1, 1);
-}
-
-.cards:hover {
-  transform: scale(1.05);
-  filter: grayscale(1);
-}
-
-.mini-card {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  width: 170px;
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 14px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.cards:hover .mini-card {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* TEXTO GENERAL */
 .texto,
 .titulo {
-  width: 100%;
-  max-width: 1100px;
-  padding: 50px 60px;
-  margin: 1rem auto;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px 30px;
   text-align: center;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   border-radius: 16px;
   color: #ffffff;
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.6;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  display: block;
 }
-.titulo{
-  background: rgb(44, 42, 42);
+
+.cat {
+  align-items: center;
+  background-color: rgb(188, 183, 192);
+  height: 25px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0);
 }
-/* CATEGORÍAS */
+
+.cat:hover {
+  transition: transform 0.4s ease;
+  transform: scale(1.05);
+}
+
+/*esta es la lista desplegable de juegos, consolas, etc.*/
 details {
-  background-color: #35303d;
+  background-color: #412470;
   color: white;
   margin: 10px;
   border-radius: 6px;
   padding: 8px;
+}
+
+details:hover {
+  transition: transform 2s ease;
+  transform: scale(1.02);
+}
+
+summary {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+details ul {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 8px;
+}
+
+details ul li {
+  padding: 7px;
 }
 
 summary {
@@ -192,26 +237,66 @@ details ul {
 }
 
 .cat {
-  display: flex;
-  justify-content: center; /* Centrado horizontal */  
-
-  background: rgb(69, 48, 48);
-  color: rgb(0, 0, 0);
-  padding: 7px;
-  border-radius: 10px;
-  font-size: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  height: 15rem;
+  position: relative;
   width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  padding: 0;
 }
 
-.cat:hover {
-  transform: scale(1.05);
-  transition: transform 0.4s ease;
+.cat::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(40, 20, 60, 0.85);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 2;
 }
 
-/* CONTACTO */
+.cat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease, filter 0.6s ease;
+}
+
+.cat_text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.cat:hover img {
+  opacity: 0.15;
+  filter: grayscale(1) brightness(0.4);
+}
+
+.cat:hover::after {
+  opacity: 1;
+}
+
+.cat:hover .cat_text {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*FIN BODY PRODUCTOS*/
+/*INICIO BODY CONTACTOS*/
+/* ===== CONTACTO → FLEX ===== */
 .contacto-flex {
   display: flex;
   flex-direction: column;
@@ -222,7 +307,8 @@ details ul {
   border-radius: 10px;
 }
 
-/* DEVOLUCIONES */
+/*FIN BODY CONTACTOS*/
+/*INICIO BODY DEVOLUCIONES*/
 .devoluciones-grid {
   display: grid;
   gap: 20px;
@@ -232,69 +318,203 @@ details ul {
   border-radius: 10px;
 }
 
-/* ICONOS REDES */
+/*FIN BODY DEVOLUCIONES*/
+/*FIN BODY*/
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-family: inherit;
+  gap: 10px;
+  padding-inline: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  border-radius: 20px;
+}
+
+.form-heading {
+  text-align: center;
+  margin: 2em;
+  color: #984dbd;
+  font-size: 1.2em;
+  background-color: transparent;
+  align-self: center;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 10px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #ccd6f6;
+  padding-inline: 1em;
+}
+
+.sendMessage-btn {
+  cursor: pointer;
+  margin-bottom: 3em;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #984dbd;
+  font-weight: bold;
+  outline: 1px solid #592075;
+  transition: all ease-in-out 0.6s;
+}
+
+.sendMessage-btn:hover {
+  transition: all ease-in-out 0.6s;
+  background-color: #592075;
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.form-card1 {
+  background-image: linear-gradient(163deg, #592075 0%, #592075 100%);
+  border-radius: 22px;
+  transition: all 0.6s;
+}
+
+.form-card1:hover {
+  box-shadow: 0px 0px 30px 1px #431859 100, 255, 218, 0.3;
+}
+
+.form-card2 {
+  border-radius: 0;
+  transition: all 0.6s;
+}
+
+.form-card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
 .wrapper {
   display: inline-flex;
   list-style: none;
+  height: 120px;
   width: 100%;
   padding-top: 40px;
+  font-family: "Poppins", sans-serif;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
-/* FOOTER */
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+/*INICIO FOOTER*/
 footer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #1b1d1f;
   color: white;
+  gap: 35px;
+  width: 100%;
+  padding: 15px 0;
   text-align: center;
 }
 
 footer a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-/* IMÁGENES RESPONSIVE */
-img {
-  max-width: 100%;
-  height: auto;
-}
+/*FIN FOOTER*/
 
-/* MOBILE */
-@media (max-width: 576px) {
-
-  header {
-    padding-top: 5px;
-  }
-
-  .container {
-    padding: 5px 10px;
-    gap: 8px;
-  }
-
-  .logo {
-    width: 45px;
-    margin: 5px;
-  }
-
-  nav {
-    padding: 5px;
-    gap: 12px;
-    width: auto;
-    border-radius: 10px;
-  }
-
-  nav a {
-    font-size: 14px;
-    padding: 4px 6px;
-  }
-}
+/*# sourceMappingURL=styles.css.map */

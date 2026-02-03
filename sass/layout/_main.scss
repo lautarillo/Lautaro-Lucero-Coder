@@ -1,6 +1,10 @@
 /*INICIO BODY*/
 body{
   background: linear-gradient(to right, rgb(91, 91, 160), rgb(146, 224, 146));
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /*BODY PRODUCTOS*/

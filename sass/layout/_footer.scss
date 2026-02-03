@@ -4,6 +4,8 @@
 /*INICIO FOOTER*/
 footer {
   @include flex();
+  margin-top: auto;
+  position: static;
   background-color: $color_footer;
   color: white;
   gap: 35px;

@@ -511,3 +511,29 @@ footer a:hover {
 /*FIN FOOTER*/
 
 /*# sourceMappingURL=styles.css.map */
+@media (max-width: 576px) {
+
+  header {
+    padding-top: 5px;
+  }
+
+  .container {
+    padding: 5px 10px;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 45px; /* más chico */
+    margin: 5px;
+  }
+
+  nav {
+    padding: 5px;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 4px 6px;
+  }
+}

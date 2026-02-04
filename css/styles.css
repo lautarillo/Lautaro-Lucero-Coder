@@ -537,7 +537,15 @@ footer a:hover {
     padding: 4px 6px;
   }
 
-  footer{
-    width: 100%;
+  footer {
+    grid-template-columns: 1fr; /* UNA sola columna */
+    gap: 20px;
+    padding: 30px 15px;
+    text-align: center;  
+  }
+  footer a {
+    display: block;
+    padding: 8px 0;
+    font-size: 15px;
   }
 }

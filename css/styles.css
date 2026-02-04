@@ -538,7 +538,6 @@ footer a:hover {
   }
 
   footer{
-    padding: 5px 10px;
-    gap: 8px;
+    width: 100%;
   }
 }

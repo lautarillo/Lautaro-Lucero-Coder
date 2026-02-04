@@ -530,13 +530,11 @@ footer a:hover {
   nav {
     width: 100%;
     justify-content: center;
-    flex-wrap: wrap;
   }
 
   nav a {
     font-size: 13px;
     padding: 6px 8px;
-    white-space: nowrap;
   }
 
   footer {

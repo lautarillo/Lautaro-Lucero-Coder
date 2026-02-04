@@ -538,7 +538,8 @@ footer a:hover {
   }
 
   footer {
-    grid-template-columns: 1fr; /* UNA sola columna */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     padding: 30px 15px;
     text-align: center;  

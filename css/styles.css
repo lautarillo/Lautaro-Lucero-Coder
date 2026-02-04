@@ -549,4 +549,8 @@ footer a:hover {
     padding: 8px 0;
     font-size: 15px;
   }
+  .footer-links{
+    display: flex;
+    align-items: center;
+  }
 }

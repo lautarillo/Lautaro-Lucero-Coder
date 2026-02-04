@@ -528,29 +528,34 @@ footer a:hover {
   }
 
   nav {
-    padding: 5px;
-    gap: 12px;
+    width: 100%;
+    justify-content: center;
   }
 
   nav a {
-    font-size: 14px;
-    padding: 4px 6px;
+    font-size: 13px;
+    padding: 6px 8px;
+    white-space: nowrap;
   }
 
   footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 30px 15px;
-    
-  }
-  footer a {
-    display: block;
-    padding: 8px 0;
-    font-size: 15px;
-  }
-  .footer-links{
     display: flex;
-    text-align: center;  
+    flex-direction: column;
+    align-items: center;   /* 🔑 centro horizontal */
+    text-align: center;
+    gap: 20px;
+  }
+
+  footer ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  footer li {
+    margin: 6px 0;
+  }
+
+  .wrapper {
+    justify-content: center;
   }
 }
